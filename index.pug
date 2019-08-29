@@ -14,12 +14,14 @@ html(lang="zh")
         title 嘯狼月餅
         link(rel="stylesheet", href="style.css")
     body
-        div(id="Logo") Howling Mooncake
-            br
-            span 嘯狼月餅
-        nav
-            +nav-t("contact","關於我們","ABOUT")
-            +nav-t("location","全球據點","LOCATIONS")
-            +nav-t("hot","熱門經典","CLASSICAL")
-            +nav-t("","媒體露出","MEDIA")
-            +nav-t("","加盟專區","FRANCHISEE")
+        header(id="Logo")
+            div Howling Mooncake
+                br
+                span 嘯狼月餅
+            nav
+                +nav-t("home","關於我們","ABOUT")
+                +nav-t("location","全球據點","LOCATIONS")
+                +nav-t("hot","熱門經典","CLASSICAL")
+                +nav-t("contact","聯絡我們","CONTACT")
+            div(id="link")
+        section(id="banner")

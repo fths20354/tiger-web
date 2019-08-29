@@ -1,4 +1,22 @@
 #Logo {
+  height: 10vh;
   background-color: gray;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+#Logo nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 15%;
+      grid-template-columns: 15% 15% 15% 15%;
+  text-align-last: left;
+}
+
+#Logo nav img {
+  height: 2em;
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */
