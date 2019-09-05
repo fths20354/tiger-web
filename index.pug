@@ -1,27 +1,50 @@
-mixin nav-t(img, textzh, texten)
-    a(href="#")
-        img(src="Image/" + img + ".png" alt="縮圖連結")
-        span=textzh
-        br
-        span=texten
-
 <!DOCTYPE html>
 html(lang="zh")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title 嘯狼月餅
+        title 嘯狼月餅 | 首頁 | 月餅專賣
         link(rel="stylesheet", href="style.css")
     body
-        header(id="Logo")
-            div Howling Mooncake
+        header(id="nav")
+            div(id="logo") Howling Mooncake
                 br
-                span 嘯狼月餅
+                span(id="logo-zh") 嘯狼月餅專賣
             nav
-                +nav-t("home","關於我們","ABOUT")
-                +nav-t("location","全球據點","LOCATIONS")
-                +nav-t("hot","熱門經典","CLASSICAL")
-                +nav-t("contact","聯絡我們","CONTACT")
-            div(id="link")
+                +nav-a("home", "關於我們", "ABOUT")
+                +nav-a("location", "全球據點", "LOCATIONS")
+                +nav-a("hot", "熱門經典", "CLASSICAL")
+                +nav-a("contact", "加盟專區", "FRANCHISEE")
+        
         section(id="banner")
+
+        section(id="about")
+            div(class="bg bg-about")
+            div(class="container")
+                +title("home", "關於我們", "ABOUT")
+
+
+        section(id="location")
+            div(class="bg bg-location")
+            div(class="container")
+                +title("location", "全球據點", "LOCATIONS")
+                
+                div(id="location-container")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+                    +loaction-box("台灣", "Taiwan", "location_taipei")
+        
+        div(class="container")
+            +title("hot", "熱門經典", "CLASSICAL")
+
+        div(class="container")
+            +title("contact", "加盟專區", "FRANCHISEE")
